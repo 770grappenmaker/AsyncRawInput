@@ -1,0 +1,16 @@
+[versions]
+kotlin = "2.0.0"
+weave = "1.0.0-b.2"
+jinput = "2.0.9"
+
+[libraries]
+weave-common = { module = "net.weavemc.api:common", version.ref = "weave" }
+weave-internals = { module = "net.weavemc:internals", version.ref = "weave" }
+jinput = { module = "net.java.jinput:jinput", version.ref = "jinput" }
+
+[plugins]
+weave = { id = "net.weavemc.gradle", version = "1.0.0-PRE" }
+kotlin = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
+
+[bundles]
+weave = ["weave-common", "weave-internals"]
